@@ -1,30 +1,11 @@
 <html>
     <head>
-        <!-- Global site tag (gtag.js) - Google Analytics -->
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-H93SZEBXD1"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-H93SZEBXD1');
-        </script>
-        <script async src="https://www.googletagmanager.com/gtag/js?id=G-EKNJL058S3%22%3E"></script>
-        <script>
-          window.dataLayer = window.dataLayer || [];
-          function gtag(){dataLayer.push(arguments);}
-          gtag('js', new Date());
-
-          gtag('config', 'G-EKNJL058S3');
-        </script>
-        <script src="script.js"></script>
+        <title>idle game</title>
+        <script src="script.js">document.getElementById('clicks').innerHTML = clicks</script>
+        <script src="upgrades.js"></script>
     </head>
     <body>
-        <!-- Google Tag Manager (noscript)
-        <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-TC495Z3"
-        height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-        End Google Tag Manager (noscript) -->
-        <button onclick="clickup()">clickup</button>
-        <div id="clicks"></div>
+        <button onclick="clickup()">Clicks+</button><button onclick="upgrades()">Upgrades</button><br>
+        <span id="clicks"></span><span id="upgrades"></span>
     </body>
 </html>
