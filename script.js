@@ -4,7 +4,7 @@ if (localStorage.getItem(`multiplier`)) multiplier = Number(localStorage.getItem
 function clickup() {
     console.log(`clicked`)
     clicks += multiplier, updateText(), canClick = false
-    setTimeout(() => {canClick = true}, 50)
+    setTimeout(() => {canClick = true}, 500)
 } function upgrade(clickAmount, cost) {
   if (multiplier >= clickAmount) return alert(`You already bought this.`)
   if (clicks >= cost) {
