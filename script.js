@@ -4,8 +4,8 @@ if (localStorage.getItem(`multiplier`)) multiplier = Number(localStorage.getItem
 function clickup() {
   clicks += multiplier, updateText()
 } function upgrade(clickAmount, cost) {
+  if (multiplier >= clickAmount) return alert(`You already bought this.`)
   if (clicks >= cost) {
-    if (multiplier >= clickAmount) return alert(`You already bought this.`)
     clicks -= cost, updateText()
     multiplier = clickAmount, localStorage.setItem(`multiplier`, multiplier)
   } else alert(`You can't buy this.`)
