@@ -1,8 +1,14 @@
 let clicks = 0, multiplier = 1
+if (localStorage.getItem(`clicks`)) clicks = localStorage.getItem(`clicks`)
+if (localStorage.getItem(`multiplier`)) multiplier = localStorage.getItem(`multiplier`)
 function clickup() {
-  clicks += multiplier
-  document.getElementById(`clicks`).textContent = clicks
+  clicks += multiplier, updateText()
 } function upgrade(clickAmount, cost) {
-  if (clicks >= cost) clicks -= cost, document.getElementById(`clicks`).textContent = clicks, multiplier = clickAmount
-  else alert(`You can't buy this!`)
+  if (clicks >= cost) {
+    clicks -= cost, updateText()
+    multiplier = clickAmount, localStorage.setItem(`multiplier`, multiplier)
+  } else alert(`You can't buy this!`)
+} function updateText() {
+  document.getElementById(`clicks`).textContent = clicks
+  localStorage.setItem(`clicks`, clicks)
 }
