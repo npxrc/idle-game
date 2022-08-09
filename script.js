@@ -1,6 +1,6 @@
 let clicks = 0, multiplier = 1
-if (localStorage.getItem(`clicks`)) clicks = localStorage.getItem(`clicks`)
-if (localStorage.getItem(`multiplier`)) multiplier = localStorage.getItem(`multiplier`)
+if (localStorage.getItem(`clicks`)) clicks = Number(localStorage.getItem(`clicks`))
+if (localStorage.getItem(`multiplier`)) multiplier = Number(localStorage.getItem(`multiplier`))
 function clickup() {
   clicks += multiplier, updateText()
 } function upgrade(clickAmount, cost) {
