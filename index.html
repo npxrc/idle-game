@@ -4,6 +4,11 @@
         <script src="/node_modules/socket.io/client-dist/socket.io.js"></script>
         <script src="script.js"></script>
     </head>
+    <style>
+        * {
+            touch-action: manipulation
+        }
+    </style>
     <body>
         <button onclick="if (canClick) clickup()">Clicks+</button><button onclick="document.getElementById(`upgrades`).style.display = [``, `none`].find(str => document.getElementById(`upgrades`).style.display != str)">Upgrades</button><br>
         <span id="clicks"></span>&nbsp;&nbsp;<span id="upgrades" style="display: none;"><button onclick="upgrade(2, 100)">Double Click - 100 Clicks</button>&nbsp;
