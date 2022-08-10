@@ -6,8 +6,7 @@ const {Server} = require(`socket.io`)
 const io = new Server(server)
 app.get(`/`, (req, res) => {
   res.sendFile(__dirname + `/index.html`)
-})
-app.use(express.static(__dirname))
+}); app.use(express.static(__dirname))
 io.on(`connection`, socket => {
   socket.on(`connected`, id => {
     console.log(`${id} has connected`)
@@ -18,7 +17,6 @@ io.on(`connection`, socket => {
       console.log(`${id} has disconnected`)
     })
   })
-})
-server.listen(process.env.PORT || 5500, `0.0.0.0`, () => {
+}); server.listen(process.env.PORT || 5500, `0.0.0.0`, () => {
   console.log('listening')
 })
