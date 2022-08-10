@@ -14,3 +14,6 @@ io.on(`connection`, socket => {
     console.log(`a user has upgraded and now has a multiplier of ${multiplier} and ${clicks} clicks`)
   })
 })
+server.listen(5500 || process.env.PORT, `0.0.0.0`, () => {
+  console.log('listening')
+})
