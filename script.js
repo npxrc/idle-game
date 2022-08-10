@@ -1,4 +1,6 @@
 let clicks = 0, multiplier = 1, canClick = true, socket = io.connect('https://ayosussy.herokuapp.com')
+if (!localStorage.getItem(`id`)) localStorage.setItem(`id`, socket.id)
+socket.emit(`connected`, localStorage.getItem(`id`))
 if (localStorage.getItem(`clicks`)) clicks = Number(localStorage.getItem(`clicks`))
 if (localStorage.getItem(`multiplier`)) multiplier = Number(localStorage.getItem(`multiplier`))
 function clickup() {

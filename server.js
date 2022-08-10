@@ -9,12 +9,14 @@ app.get(`/`, (req, res) => {
 })
 app.use(express.static(__dirname))
 io.on(`connection`, socket => {
-  console.log(`${socket.id} has connected`)
-  socket.on(`upgraded`, (clicks, multiplier) => {
-    console.log(`${socket.id} has upgraded and now has a multiplier of ${multiplier} and ${clicks} clicks`)
-  })
-  socket.on(`disconnect`, () => {
-    console.log(`${socket.id} has disconnected`)
+  socket.on(`connected`, id => {
+    console.log(`${id} has connected`)
+    socket.on(`upgraded`, (clicks, multiplier) => {
+      console.log(`${id} has upgraded and now has a multiplier of ${multiplier} and ${clicks} clicks`)
+    })
+    socket.on(`disconnect`, () => {
+      console.log(`${id} has disconnected`)
+    })
   })
 })
 server.listen(process.env.PORT || 5500, `0.0.0.0`, () => {
