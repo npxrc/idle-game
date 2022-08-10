@@ -8,7 +8,7 @@ function clickup() {
     clicks += multiplier, updateText(), canClick = false
     setTimeout(() => {canClick = true}, 75)
 } function upgrade(clickAmount, cost) {
-  if (multiplier >= clickAmount) return alert(`You already bought this.`)
+  if (multiplier >= clickAmount) return alert(`You already have this.`)
   if (clicks >= cost) {
     clicks -= cost, updateText()
     multiplier = clickAmount, localStorage.setItem(`multiplier`, multiplier)
