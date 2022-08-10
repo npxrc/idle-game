@@ -12,8 +12,7 @@ io.on(`connection`, socket => {
     console.log(`${id} has connected`)
     socket.on(`upgraded`, (clicks, multiplier) => {
       console.log(`${id} has upgraded and now has a multiplier of ${multiplier} and ${clicks} clicks`)
-    })
-    socket.on(`disconnect`, () => {
+    }); socket.on(`disconnect`, () => {
       console.log(`${id} has disconnected`)
     })
   })
