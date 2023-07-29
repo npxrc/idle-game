@@ -11,3 +11,5 @@ There's no *real* ***bugs*** yet, but when bugs arise, they will be in this sect
 + Autoclicker prevention will come soon.
 # Other Notes
 I've already started working on vbeta2, which should be released soon. I'm going to be vacationing however, so F in chat for people who want instant updates.
+
+2023 update: buying a new PC, i havent touched this repo in over a year
